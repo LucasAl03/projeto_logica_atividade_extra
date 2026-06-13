@@ -1,3 +1,4 @@
+//Pegando elementos do DOM
 const formDados = document.querySelector('#formulario')
 const divResultado = document.querySelector('#resultado')
 
@@ -10,8 +11,10 @@ formDados.addEventListener('submit', (evt)=>{
 
     console.log(num)
 
-    let = parseFloat(num1 + num2 + num3) / parseFloat(3)
-
-    divResultado.innerHTML = ` ${num} `
+    if((num % 3 === 0) && (num % 7 === 0)){
+        divResultado.innerHTML = `O número ${num} é divisível por 3 e 7`
+    }else{
+        divResultado.innerHTML = `O número ${num} NÃO é divisível por 3 e 7`
+    }
 
 })
