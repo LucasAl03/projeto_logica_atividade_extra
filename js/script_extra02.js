@@ -7,14 +7,13 @@ formDados.addEventListener('submit', (evt)=>{
     evt.preventDefault()
     const form_num = new FormData(formDados)
 
-    let num = parseFloat(form_num.get('num'))
+    let code = `ABCD1234`
+    let password = `1234`
 
-    console.log(num)
-
-    if((num % 3 === 0) && (num % 7 === 0)){
-        divResultado.innerHTML = `O número ${num} é divisível por 3 e 7`
+    if((codigo = code)&&(senha = password)){
+        divResultado.innerHTML = `ACESSO PERMITIDO`
     }else{
-        divResultado.innerHTML = `O número ${num} NÃO é divisível por 3 e 7`
+        divResultado.innerHTML = `ACESSO NEGADO`
     }
 
 })
