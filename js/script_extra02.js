@@ -7,13 +7,13 @@ formDados.addEventListener('submit', (evt)=>{
     evt.preventDefault()
     const form_num = new FormData(formDados)
 
-    let code = parseFloat(form_num.get('num'))
-    let senha = parseFloat(form_num.get(`num`))
+    let codigo = (form_num.get('codigo'))
+    let senha = (form_num.get('senha'))
 
-    if((code == 'ABCD1234')&&(senha = `1234`)){
-        divResultado.innerHTML("ACESSO PERMITIDO")
+    if((codigo == "ABCD1234") && (senha == "1234")){
+        alert("ACESSO PERMITIDO")
     }else{
-        divResultado.innerHTML("ACESSO NEGADO")
+        alert("ACESSO NEGADO")
     }
 
 })
